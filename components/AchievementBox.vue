@@ -4,7 +4,7 @@
             <div class="row">
                 <img class="trophy-icon align-self-center" src="~assets/icons/trophy.svg" alt="">
                 <div class="col">
-                    <p class="position">{{ position }} Position</p>
+                    <p class="position">{{ position }} Position | {{ grade }}</p>
                     <h4 class="title">{{ title }}</h4>
                 </div>
             </div>
@@ -69,7 +69,8 @@
     export default {
         props:{
             position: String,
-            title: String
+            title: String,
+            grade: String
         }
     }
 </script>
