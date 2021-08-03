@@ -78,10 +78,18 @@
           </NuxtLink>
         </div>
         <div class="row mt-3">
-          <AchievementBox position="1st" title="Intechfest, Web Design Competition."/>
-          <AchievementBox position="1st" title="Ramadhan Fair, Poster Design Competition."/>
-          <AchievementBox position="1st" title="Intechfest, Web Design Competition."/>
-          <AchievementBox position="1st" title="Ramadhan Fair, Poster Design Competition."/>
+          <AchievementBox position="1st" grade="National" title="Intechfest, Web Design Competition."/>
+          <AchievementBox position="1st" grade="National" title="Ramadhan Fair, Poster Design Competition."/>
+          <AchievementBox position="2st" grade="National" title="LPAI, Poster Design Competition."/>
+          <AchievementBox position="2nd" grade="National" title="GDTLAB VSC #2, Graphic Design Technolgy"/>
+        </div>
+        <div class="view-more text-center">
+          <p style="color: white">See all achievement
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+          </p>
         </div>
       </div>
     </div>
@@ -120,6 +128,14 @@
                 <img src="~assets/images/project/project-ui-3.jpg" class="featuredproject" alt="">
               </div>
           </div>
+        </div>
+        <div class="view-more text-center mt-md-5 mt-4">
+          <p style="color: white">See all Project
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+          </p>
         </div>
       </div>
     </div>
@@ -372,6 +388,10 @@ export default {
     font-family: 'Poppins';
   }
 
+  .view-more{
+    display: none;
+  }
+
 
 
 
@@ -550,6 +570,11 @@ export default {
       font-size: 14px;
     }
 
+    .view-more{
+      display: block !important;
+      font-size: 20px;
+    }
+
   }
 
 
@@ -641,6 +666,11 @@ export default {
 
     .section-7{
       padding: 0 10%;
+    }
+
+        .view-more{
+      display: block !important;
+      font-size: 28px;
     }
   }
 
