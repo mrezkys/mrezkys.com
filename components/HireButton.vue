@@ -21,6 +21,7 @@
 
 <style scoped>
     .hire-button{
+        font-family: 'Poppins';
         padding: 16px 30px;
         background-color: white;
         color: black;
