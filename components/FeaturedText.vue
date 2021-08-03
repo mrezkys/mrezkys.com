@@ -10,6 +10,8 @@
         margin-bottom: 25px;
     }
     .featured-text{
+        font-family: 'Poppins';
+        font-weight: 500;
         font-size: 18px;
     }
     .stacked-bg{
