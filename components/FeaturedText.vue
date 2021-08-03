@@ -24,7 +24,10 @@
   @media (max-width: 575.98px) {
     .featured-text{
         text-align: center;
+        font-size: 14px;
+        font-weight: 400;
     }
+    
 
   }
 
