@@ -1,0 +1,17 @@
+<svg width="711" height="712" viewBox="0 0 711 712" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g opacity="0.1">
+<rect width="711" height="712" fill="url(#pattern0)"/>
+<rect width="711" height="712" fill="url(#paint0_linear)"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="translate(-0.000703235) scale(0.0370891)"/>
+</pattern>
+<linearGradient id="paint0_linear" x1="355.5" y1="0" x2="355.5" y2="712" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="0.0001" stop-opacity="0"/>
+<stop offset="1" stop-opacity="0.65"/>
+</linearGradient>
+<image id="image0" width="27" height="27" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA/SURBVHgB7ZTBCQAwCMS80v1Xbp2g9SE+NHkfBASj41gRywpBhuzJjozk/DaRF+p7RlEQZDNlFCQFCoJsqOwChZIULP10HcwAAAAASUVORK5CYII="/>
+</defs>
+</svg>
