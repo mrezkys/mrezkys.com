@@ -1,6 +1,6 @@
 <template>
 <div>
-  <b-navbar toggleable="sm" type="dark" variant="dark" class="navbar p-0 bg-transparent">
+  <b-navbar toggleable="lg" type="dark" variant="dark" class="navbar p-0 bg-transparent">
     <b-navbar-brand >
       <img src="~assets/icons/mrezkyslogo.svg" alt="">
     </b-navbar-brand>
