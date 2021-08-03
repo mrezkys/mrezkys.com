@@ -25,7 +25,7 @@
         cursor: pointer;
     }
     .experience-box .box-1{
-        padding: 25px 30px;
+        padding: 25px 25px;
         color: white !important;
         height: 240px !important;
         background: #2C2C2C;
@@ -36,6 +36,7 @@
     }
 
     .experience-box .box-1 .content .year-count{
+        font-family: 'Roboto';
         font-size: 16px;
         font-weight: 500;
         padding: 0;
@@ -44,6 +45,7 @@
     }
 
     .experience-box .box-1 .content .role{
+        font-family: 'Poppins';
         font-size: 22px;
         font-weight: 700;
         padding: 0;
@@ -52,8 +54,9 @@
     }
 
     .experience-box .box-1 .content .discover{
+        font-family: 'Roboto';
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 300;
         padding: 0;
         margin: 0;
     }
