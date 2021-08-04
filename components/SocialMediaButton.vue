@@ -7,28 +7,28 @@
                 </a>
             </div>
             <div class="social-media-button">
-                <a href="https://github.com/mrezkys">
-                    <img src="~/assets/icons/logo-facebook.svg" alt="">
+                <a href="https://dribbble.com/mrezkys">
+                    <img src="~/assets/icons/logo-dribbble.svg" alt="">
                 </a>
             </div>
             <div class="social-media-button">
-                <a href="https://github.com/mrezkys">
+                <a href="https://medium.com/@mrezkysrezky">
                     <img src="~/assets/icons/logo-medium.svg" alt="">
                 </a>
             </div>
             <div class="social-media-button">
-                <a href="https://github.com/mrezkys">
-                    <img src="~/assets/icons/logo-linkedin.svg" alt="">
+                <a href="https://www.behance.net/mrezkys">
+                    <img src="~/assets/icons/logo-behance.svg" alt="">
                 </a>
             </div>
             <div class="social-media-button">
-                <a href="https://github.com/mrezkys">
+                <a href="https://instagram.com/mrezkys_">
                     <img src="~/assets/icons/logo-instagram.svg" alt="">
                 </a>
             </div>
             <div class="social-media-button">
-                <a href="https://github.com/mrezkys">
-                    <img src="~/assets/icons/logo-whatsapp.svg" alt="">
+                <a href="https://facebook.com/mrezkys12">
+                    <img src="~/assets/icons/logo-facebook.svg" alt="">
                 </a>
             </div>
         </div>

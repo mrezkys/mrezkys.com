@@ -20,8 +20,8 @@
           <div class="row">
             <div class="col-lg-7 col-12 welcome-box ">
               <h1 class="title">Hello, I’m mrezkys.</h1>
-              <h3 class="subtitle">Graphic Designer & Web Developer</h3>
-              <p class="description">Hello , my name is Muhammad Rezky Sulihin. But, in the internet, i usually using “ mrezkys “ for my nickname. I’m 17 y.o . aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure .</p>
+              <h3 class="subtitle">Graphic Designer & Programmer</h3>
+              <p class="description">Hello , my name is Muhammad Rezky Sulihin. But, in the internet, i usually using “ mrezkys “ for my nickname. I’m 17 y.o freshman at Mataram University and currently studying Informatics Engineering . I write code and designing, apart from that I have several parallel skills.</p>
               <HolographicButton text="More About Me"/>
               <SocialMediaButton style="margin-top: 40px"/>
             </div>
@@ -36,7 +36,7 @@
                   <div class="col-1 p-0"><hr style="background-color: white; height: 1px;"></div>
                 </div>
               </div>
-              <FeaturedText text="I will help you to make your dream Website for your personal website or your company website." :styling="{ backgroundColor: '#464646' }"/>
+              <FeaturedText text="I will help you to make your dream Website, Software, or Mobile App for you or your company" :styling="{ backgroundColor: '#464646' }"/>
               <FeaturedText text="I will help you to make Design or Illustration for your Bussiness." :styling="{ backgroundColor: '#363636' }" />
               <HireButton style="margin-top: 45px"/>
             </div>
