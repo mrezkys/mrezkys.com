@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="loadingScreen" class="loadingScreen">
+    <div v-show="loadingScreen" class="loadingScreen p-5">
       <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       <br>
       <p>If its takes a long time to load, check your internet connection</p>
@@ -9,13 +9,10 @@
       <div class="container-lg">
             <Navbar/>
         </div>
-        <div class="container-lg section-1 pt-5 pb-5 mt-1">
-          <!-- <div class="stacked-logo">
-            <img src="~assets/icons/mylogograd.svg" class="img-fluid" alt="">
-          </div> -->
+        <div class="container-lg section-1 pt-5 pb-5 mt-1 animated fadeInUp duration-1s">
           <div class="row">
-            <div class="col-lg-7 col-12 welcome-box">
-              <transition><h1 class="title">Hello, I’m mrezkys.</h1></transition>
+            <div class="col-lg-7 col-12 welcome-box ">
+              <h1 class="title">Hello, I’m mrezkys.</h1>
               <h3 class="subtitle">Graphic Designer & Web Developer</h3>
               <p class="description">Hello , my name is Muhammad Rezky Sulihin. But, in the internet, i usually using “ mrezkys “ for my nickname. I’m 17 y.o . aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure .</p>
               <HolographicButton text="More About Me"/>
@@ -38,7 +35,7 @@
             </div>
           </div>
         </div>
-        <div class="container-lg section-2 pt-3 pb-3 pt-lg-5 pb-lg-5 mt-lg-3">
+        <div class="container-lg section-2 pt-3 pb-3 pt-lg-5 pb-lg-5 mt-lg-3 animated fadeInUp duration-3s">
           <div class="row">
             <div class="offset-lg-1 col-lg-4 col-12 secondary-image-box">
               <img src="~assets/images/me.jpg" class="img-fluid" alt="">
@@ -228,14 +225,63 @@ export default {
 </script>
 <style>
 
-  .loadingScreen{
-      display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
+  @keyframes fadeInUp {
+    from {
+      transform: translate3d(0,40px,0)
+    }
+
+    to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+    }
   }
+
+  @-webkit-keyframes fadeInUp {
+    from {
+      transform: translate3d(0,40px,0)
+    }
+
+    to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+    }
+  }
+
+  .animated {
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both
+  }
+
+  .duration-1s{
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+  }
+
+  .duration-2s{
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+  }
+
+  .duration-3s{
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+  }
+
+  .fadeInUp {
+      opacity: 0;
+      animation-name: fadeInUp;
+      -webkit-animation-name: fadeInUp;
+  }
+
+  .loadingScreen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+
   .lds-roller {
     display: inline-block;
     width: 80px;
