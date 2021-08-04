@@ -6,6 +6,13 @@
       <p>If its takes a long time to load, check your internet connection</p>
     </div>
     <div v-show="showScreen">
+      <div>
+        <b-modal ref="my-modal" hide-footer title="Announcement">
+          <div class="">
+            <p>Hello ! Sorry, this site is still under development, so not everything can be accessed. but you can still access the <strong>achievement</strong> menu.</p>
+          </div>
+        </b-modal>
+      </div>
       <div class="container-lg">
             <Navbar/>
         </div>
@@ -71,7 +78,7 @@
                 <h1 class="achievement-count mr-5">15+</h1>
                 <p class="title"><br> total <br> awards & <br> achievements</p>
               </div>
-              <NuxtLink to="/" class="see-all">
+              <NuxtLink to="/achievement" class="see-all">
               <p style="color: white">See all achievement
                         <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,16 +90,18 @@
             <div class="row mt-3">
               <AchievementBox position="1st" grade="National" title="Intechfest, Web Design Competition."/>
               <AchievementBox position="1st" grade="National" title="Ramadhan Fair, Poster Design Competition."/>
-              <AchievementBox position="2st" grade="National" title="LPAI, Poster Design Competition."/>
+              <AchievementBox position="2nd" grade="National" title="LPAI, Poster Design Competition."/>
               <AchievementBox position="2nd" grade="National" title="GDTLAB VSC #2, Graphic Design Technolgy"/>
             </div>
             <div class="view-more text-center">
+              <NuxtLink to="/achievement" class="see-all">
               <p style="color: white">See all achievement
                         <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
               </p>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -193,6 +202,14 @@
 
 <script>
 export default {
+  methods: {
+      showModal() {
+        this.$refs['my-modal'].show()
+      },
+      hideModal() {
+        this.$refs['my-modal'].hide()
+      }
+    },
   head(){
     return {
       title: 'mrezkys',
@@ -212,6 +229,8 @@ export default {
   mounted() {
     this.loadingScreen = false;
     this.showScreen = true;
+    this.showModal();
+
     
     
   },
@@ -224,150 +243,18 @@ export default {
 }
 </script>
 <style>
-
-  @keyframes fadeInUp {
-    from {
-      transform: translate3d(0,40px,0)
-    }
-
-    to {
-      transform: translate3d(0,0,0);
-      opacity: 1
-    }
+  .modal-header {
+    background-color: rgb(46, 46, 46);
+    border: none !important;
   }
 
-  @-webkit-keyframes fadeInUp {
-    from {
-      transform: translate3d(0,40px,0)
-    }
-
-    to {
-      transform: translate3d(0,0,0);
-      opacity: 1
-    }
+  .modal-body{
+    background-color: rgb(31, 31, 31);
+    border: none;
+    text-align: left;
   }
-
-  .animated {
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both
-  }
-
-  .duration-1s{
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-  }
-
-  .duration-2s{
-    animation-duration: 2s;
-    -webkit-animation-duration: 2s;
-  }
-
-  .duration-3s{
-    animation-duration: 3s;
-    -webkit-animation-duration: 3s;
-  }
-
-  .fadeInUp {
-      opacity: 0;
-      animation-name: fadeInUp;
-      -webkit-animation-name: fadeInUp;
-  }
-
-  .loadingScreen{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-  }
-
-  .lds-roller {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-roller div {
-    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    transform-origin: 40px 40px;
-  }
-  .lds-roller div:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #fff;
-    margin: -4px 0 0 -4px;
-  }
-  .lds-roller div:nth-child(1) {
-    animation-delay: -0.036s;
-  }
-  .lds-roller div:nth-child(1):after {
-    top: 63px;
-    left: 63px;
-  }
-  .lds-roller div:nth-child(2) {
-    animation-delay: -0.072s;
-  }
-  .lds-roller div:nth-child(2):after {
-    top: 68px;
-    left: 56px;
-  }
-  .lds-roller div:nth-child(3) {
-    animation-delay: -0.108s;
-  }
-  .lds-roller div:nth-child(3):after {
-    top: 71px;
-    left: 48px;
-  }
-  .lds-roller div:nth-child(4) {
-    animation-delay: -0.144s;
-  }
-  .lds-roller div:nth-child(4):after {
-    top: 72px;
-    left: 40px;
-  }
-  .lds-roller div:nth-child(5) {
-    animation-delay: -0.18s;
-  }
-  .lds-roller div:nth-child(5):after {
-    top: 71px;
-    left: 32px;
-  }
-  .lds-roller div:nth-child(6) {
-    animation-delay: -0.216s;
-  }
-  .lds-roller div:nth-child(6):after {
-    top: 68px;
-    left: 24px;
-  }
-  .lds-roller div:nth-child(7) {
-    animation-delay: -0.252s;
-  }
-  .lds-roller div:nth-child(7):after {
-    top: 63px;
-    left: 17px;
-  }
-  .lds-roller div:nth-child(8) {
-    animation-delay: -0.288s;
-  }
-  .lds-roller div:nth-child(8):after {
-    top: 56px;
-    left: 12px;
-  }
-  @keyframes lds-roller {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
   body{
-    background-color: black;
+    background-color: black !important;
     color: white;
     margin: 0px;
     padding: 0px;
@@ -839,6 +726,146 @@ export default {
   }
 
 
+  @keyframes fadeInUp {
+    from {
+      transform: translate3d(0,40px,0)
+    }
+
+    to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+    }
+  }
+
+  @-webkit-keyframes fadeInUp {
+    from {
+      transform: translate3d(0,40px,0)
+    }
+
+    to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+    }
+  }
+
+  .animated {
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both
+  }
+
+  .duration-1s{
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+  }
+
+  .duration-2s{
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+  }
+
+  .duration-3s{
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+  }
+
+  .fadeInUp {
+      opacity: 0;
+      animation-name: fadeInUp;
+      -webkit-animation-name: fadeInUp;
+  }
+
+  .loadingScreen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  .lds-roller {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 </style>
 
