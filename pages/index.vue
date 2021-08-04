@@ -1,189 +1,196 @@
 <template>
   <div>
-    <div class="container-lg">
-        <Navbar/>
+    <div v-show="loadingScreen" class="loadingScreen">
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <br>
+      <p>If its takes a long time to load, check your internet connection</p>
     </div>
-    <div class="container-lg section-1 pt-5 pb-5 mt-1">
-      <!-- <div class="stacked-logo">
-        <img src="~assets/icons/mylogograd.svg" class="img-fluid" alt="">
-      </div> -->
-      <div class="row">
-        <div class="col-lg-7 col-12 welcome-box">
-          <h1 class="title">Hello, I’m mrezkys.</h1>
-          <h3 class="subtitle">Graphic Designer & Web Developer</h3>
-          <p class="description">Hello , my name is Muhammad Rezky Sulihin. But, in the internet, i usually using “ mrezkys “ for my nickname. I’m 17 y.o . aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure .</p>
-          <HolographicButton text="More About Me"/>
-          <SocialMediaButton style="margin-top: 40px"/>
+    <div v-show="showScreen">
+      <div class="container-lg">
+            <Navbar/>
         </div>
-        <div class="offset-lg-1 col-lg-4 col-12 promo-box">
-          <h1 class="title">I believe in Dreams,<br> and I’ll make your<br> Dreams comes true.</h1>
-          <div class="secondary-title-box">
-            <div class="row align-items-center">
-              <div class="col-1 p-0"><hr style="background-color: white; height: 1px;"></div>
-              <div class="col-10 p-0">
-                <h1 class="header">I believe in Dreams,<br> and I’ll make your Dreams <br>comes true.</h1>
+        <div class="container-lg section-1 pt-5 pb-5 mt-1">
+          <!-- <div class="stacked-logo">
+            <img src="~assets/icons/mylogograd.svg" class="img-fluid" alt="">
+          </div> -->
+          <div class="row">
+            <div class="col-lg-7 col-12 welcome-box">
+              <transition><h1 class="title">Hello, I’m mrezkys.</h1></transition>
+              <h3 class="subtitle">Graphic Designer & Web Developer</h3>
+              <p class="description">Hello , my name is Muhammad Rezky Sulihin. But, in the internet, i usually using “ mrezkys “ for my nickname. I’m 17 y.o . aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure .</p>
+              <HolographicButton text="More About Me"/>
+              <SocialMediaButton style="margin-top: 40px"/>
+            </div>
+            <div class="offset-lg-1 col-lg-4 col-12 promo-box">
+              <h1 class="title">I believe in Dreams,<br> and I’ll make your<br> Dreams comes true.</h1>
+              <div class="secondary-title-box">
+                <div class="row align-items-center">
+                  <div class="col-1 p-0"><hr style="background-color: white; height: 1px;"></div>
+                  <div class="col-10 p-0">
+                    <h1 class="header">I believe in Dreams,<br> and I’ll make your Dreams <br>comes true.</h1>
+                  </div>
+                  <div class="col-1 p-0"><hr style="background-color: white; height: 1px;"></div>
+                </div>
               </div>
-              <div class="col-1 p-0"><hr style="background-color: white; height: 1px;"></div>
+              <FeaturedText text="I will help you to make your dream Website for your personal website or your company website." :styling="{ backgroundColor: '#464646' }"/>
+              <FeaturedText text="I will help you to make Design or Illustration for your Bussiness." :styling="{ backgroundColor: '#363636' }" />
+              <HireButton style="margin-top: 45px"/>
             </div>
           </div>
-          <FeaturedText text="I will help you to make your dream Website for your personal website or your company website." :styling="{ backgroundColor: '#464646' }"/>
-          <FeaturedText text="I will help you to make Design or Illustration for your Bussiness." :styling="{ backgroundColor: '#363636' }" />
-          <HireButton style="margin-top: 45px"/>
         </div>
-      </div>
-    </div>
-    <div class="container-lg section-2 pt-3 pb-3 pt-lg-5 pb-lg-5 mt-lg-3">
-      <div class="row">
-        <div class="offset-lg-1 col-lg-4 col-12 secondary-image-box">
-          <img src="~assets/images/me.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-7 col-12 align-self-center about-box mt-sm-3">
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <br>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-        <div class="offset-lg-1 col-lg-4 col-12 primary-image-box">
-          <img src="~assets/images/me.jpg" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="container-lg section-3 pt-1 pb-3 pt-lg-5 pb-lg-3 mt-lg-2">
-      <div class="experience-box-wrapper">
-        <div class="row align-items-center header ml-md-3">
-          <h1 class="experience-count mr-5">3+</h1>
-          <p class="title"><br> total <br> years of <br> experience</p>
-        </div>
-        <div class="row mt-3">
-          <HolographicExperienceBox role="Graphic Designer" yearCount="3 Years" :iconPath="require('~/assets/icons/3.svg')"/>
-          <ExperienceBox role="Web Developer" yearCount="1 year" :iconPath="require('~/assets/icons/1.svg')"/>
-          <ExperienceBox role="Flutter Developer" yearCount="2 Month" :iconPath="require('~/assets/icons/2.svg')"/>
-          <ExperienceBox role="UI/UX Designer" yearCount="3 Month" :iconPath="require('~/assets/icons/3.svg')"/>
-        </div>
-      </div>
-    </div>
-    <div class="container-lg section-4 pt-1 pb-3 pt-lg-5 pb-lg-3 mt-lg-3">
-      <div class="achievement-box-wrapper">
-        <div class="row align-items-end header justify-content-between ml-md-3">
-          <div class="row align-items-center">            
-            <h1 class="achievement-count mr-5">15+</h1>
-            <p class="title"><br> total <br> awards & <br> achievements</p>
-          </div>
-          <NuxtLink to="/" class="see-all">
-          <p style="color: white">See all achievement
-                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-          </p>
-          </NuxtLink>
-        </div>
-        <div class="row mt-3">
-          <AchievementBox position="1st" grade="National" title="Intechfest, Web Design Competition."/>
-          <AchievementBox position="1st" grade="National" title="Ramadhan Fair, Poster Design Competition."/>
-          <AchievementBox position="2st" grade="National" title="LPAI, Poster Design Competition."/>
-          <AchievementBox position="2nd" grade="National" title="GDTLAB VSC #2, Graphic Design Technolgy"/>
-        </div>
-        <div class="view-more text-center">
-          <p style="color: white">See all achievement
-                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="container-lg section-5 pt-5 pb-3 mt-lg-3">
-      <div class="featuredproject-box-wrapper">
-        <div class="mb-5 row align-items-end header justify-content-between ml-md-4">          
-          <div class="row align-items-center">
-            <img class="project-count mr-5" src="~assets/icons/20+.png" alt="">
-            <p class="title"><br> total <br> portfolio & <br> project</p>
-          </div>
-          <NuxtLink to="/" class="see-all">
-            <p style="color: white">See all Portfolio
-                      <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-            </p>
-          </NuxtLink>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 box col-md-6 col-12">
-            <div class="col-12  featuredproject-box p-0">
-              <img src="~assets/images/project/logo-1.jpg" class="featuredproject" alt="">
+        <div class="container-lg section-2 pt-3 pb-3 pt-lg-5 pb-lg-5 mt-lg-3">
+          <div class="row">
+            <div class="offset-lg-1 col-lg-4 col-12 secondary-image-box">
+              <img src="~assets/images/me.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-7 col-12 align-self-center about-box mt-sm-3">
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <br>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="offset-lg-1 col-lg-4 col-12 primary-image-box">
+              <img src="~assets/images/me.jpg" class="img-fluid" alt="">
             </div>
           </div>
-          <div class="col-lg-4 box-secondary-left col-md-6 mb-md-5 col-6 mt-md-0 mt-3">
-            <div class="col-12  featuredproject-box p-0">
-              <img src="~assets/images/project/project-ui-2.jpg" class="featuredproject" alt="">
+        </div>
+        <div class="container-lg section-3 pt-1 pb-3 pt-lg-5 pb-lg-3 mt-lg-2">
+          <div class="experience-box-wrapper">
+            <div class="row align-items-center header ml-md-3">
+              <h1 class="experience-count mr-5">3+</h1>
+              <p class="title"><br> total <br> years of <br> experience</p>
+            </div>
+            <div class="row mt-3">
+              <HolographicExperienceBox role="Graphic Designer" yearCount="3 Years" :iconPath="require('~/assets/icons/3.svg')"/>
+              <ExperienceBox role="Web Developer" yearCount="1 year" :iconPath="require('~/assets/icons/1.svg')"/>
+              <ExperienceBox role="Flutter Developer" yearCount="2 Month" :iconPath="require('~/assets/icons/2.svg')"/>
+              <ExperienceBox role="UI/UX Designer" yearCount="3 Month" :iconPath="require('~/assets/icons/3.svg')"/>
             </div>
           </div>
-          <div class="col-lg-3 box-secondary-right col-md-12 col-6 mt-md-0 mt-3">
-              <div class="p-0 m-0 stacked-display d-flex flex-column justify-content-center align-items-center">
-                <h4 class="p-0 m-0">20+ Project</h4>
+        </div>
+        <div class="container-lg section-4 pt-1 pb-3 pt-lg-5 pb-lg-3 mt-lg-3">
+          <div class="achievement-box-wrapper">
+            <div class="row align-items-end header justify-content-between ml-md-3">
+              <div class="row align-items-center">            
+                <h1 class="achievement-count mr-5">15+</h1>
+                <p class="title"><br> total <br> awards & <br> achievements</p>
               </div>
-              <div class="col-12  featuredproject-box p-0 opacity-5">
-                <img src="~assets/images/project/project-ui-3.jpg" class="featuredproject" alt="">
+              <NuxtLink to="/" class="see-all">
+              <p style="color: white">See all achievement
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+              </p>
+              </NuxtLink>
+            </div>
+            <div class="row mt-3">
+              <AchievementBox position="1st" grade="National" title="Intechfest, Web Design Competition."/>
+              <AchievementBox position="1st" grade="National" title="Ramadhan Fair, Poster Design Competition."/>
+              <AchievementBox position="2st" grade="National" title="LPAI, Poster Design Competition."/>
+              <AchievementBox position="2nd" grade="National" title="GDTLAB VSC #2, Graphic Design Technolgy"/>
+            </div>
+            <div class="view-more text-center">
+              <p style="color: white">See all achievement
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container-lg section-5 pt-5 pb-3 mt-lg-3">
+          <div class="featuredproject-box-wrapper">
+            <div class="mb-5 row align-items-end header justify-content-between ml-md-4">          
+              <div class="row align-items-center">
+                <img class="project-count mr-5" src="~assets/icons/20+.png" alt="">
+                <p class="title"><br> total <br> portfolio & <br> project</p>
               </div>
+              <NuxtLink to="/" class="see-all">
+                <p style="color: white">See all Portfolio
+                          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                </p>
+              </NuxtLink>
+            </div>
+            <div class="row">
+              <div class="col-lg-5 box col-md-6 col-12">
+                <div class="col-12  featuredproject-box p-0">
+                  <img src="~assets/images/project/logo-1.jpg" class="featuredproject" alt="">
+                </div>
+              </div>
+              <div class="col-lg-4 box-secondary-left col-md-6 mb-md-5 col-6 mt-md-0 mt-3">
+                <div class="col-12  featuredproject-box p-0">
+                  <img src="~assets/images/project/project-ui-2.jpg" class="featuredproject" alt="">
+                </div>
+              </div>
+              <div class="col-lg-3 box-secondary-right col-md-12 col-6 mt-md-0 mt-3">
+                  <div class="p-0 m-0 stacked-display d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="p-0 m-0">20+ Project</h4>
+                  </div>
+                  <div class="col-12  featuredproject-box p-0 opacity-5">
+                    <img src="~assets/images/project/project-ui-3.jpg" class="featuredproject" alt="">
+                  </div>
+              </div>
+            </div>
+            <div class="view-more text-center mt-md-5 mt-4">
+              <p style="color: white">See all Project
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="view-more text-center mt-md-5 mt-4">
-          <p style="color: white">See all Project
-                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.56274 4.88578H2.31274" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.04199 2.37558L8.56283 4.88558L6.04199 7.396" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-          </p>
+        <div class="container-lg section-6 mt-5 mb-3 ">
+          <h1 class="ml-md-3 title">Tools & Skills</h1>
+          <div class="col-12 mt-4">
+            <div class="row justify-content-between">
+              <div class="tools-skills-box">
+                <img src="~assets/images/tools/ps.jpg" class="tools-skills-image" alt="">
+              </div>
+              <div class="tools-skills-box">
+                <img src="~assets/images/tools/ai.jpg" class="tools-skills-image" alt="">
+              </div>
+              <div class="tools-skills-box">
+                <img src="~assets/images/tools/bootstrap.jpg" class="tools-skills-image" alt="">
+              </div>
+              <div class="tools-skills-box">
+                <img src="~assets/images/tools/flutter.jpg" class="tools-skills-image" alt="">
+              </div>
+              <div class="tools-skills-box">
+                <img src="~assets/images/tools/css3.jpg" class="tools-skills-image" alt="">
+              </div>
+              <div class="tools-skills-box">
+                <img src="~assets/images/tools/figma.jpg" class="tools-skills-image" alt="">
+              </div>
+              <div class="tools-skills-box">
+                <img src="~assets/images/tools/html5.jpg" class="tools-skills-image" alt="">
+              </div>
+              <div class="tools-skills-box">
+                <img src="~assets/images/tools/laravel.jpg" class="tools-skills-image" alt="">
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="container-lg section-7 pb-3 pt-5">
+          <div class="col-12 interest-banner">
+            <div class="row justify-content-between align-items-center">
+              <h3 class="title">interested <br> working with me?</h3>
+              <div class="button"><HolographicButton text="Hire Me"/></div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="footer-content">
+            <h4 class="title">For business inquiry please send email to <br> mrezkysulihin@gmail.com</h4>
+            <p class="copyright">Muhammad Rezky Sulihin - 2021</p>
+          </div>
+        </footer>
     </div>
-    <div class="container-lg section-6 mt-5 mb-3 ">
-      <h1 class="ml-md-3 title">Tools & Skills</h1>
-      <div class="col-12 mt-4">
-        <div class="row justify-content-between">
-          <div class="tools-skills-box">
-            <img src="~assets/images/tools/ps.jpg" class="tools-skills-image" alt="">
-          </div>
-          <div class="tools-skills-box">
-            <img src="~assets/images/tools/ai.jpg" class="tools-skills-image" alt="">
-          </div>
-          <div class="tools-skills-box">
-            <img src="~assets/images/tools/bootstrap.jpg" class="tools-skills-image" alt="">
-          </div>
-          <div class="tools-skills-box">
-            <img src="~assets/images/tools/flutter.jpg" class="tools-skills-image" alt="">
-          </div>
-          <div class="tools-skills-box">
-            <img src="~assets/images/tools/css3.jpg" class="tools-skills-image" alt="">
-          </div>
-          <div class="tools-skills-box">
-            <img src="~assets/images/tools/figma.jpg" class="tools-skills-image" alt="">
-          </div>
-          <div class="tools-skills-box">
-            <img src="~assets/images/tools/html5.jpg" class="tools-skills-image" alt="">
-          </div>
-          <div class="tools-skills-box">
-            <img src="~assets/images/tools/laravel.jpg" class="tools-skills-image" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-lg section-7 pb-3 pt-5">
-      <div class="col-12 interest-banner">
-        <div class="row justify-content-between align-items-center">
-          <h3 class="title">interested <br> working with me?</h3>
-          <div class="button"><HolographicButton text="Hire Me"/></div>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <div class="footer-content">
-        <h4 class="title">For business inquiry please send email to <br> mrezkysulihin@gmail.com</h4>
-        <p class="copyright">Muhammad Rezky Sulihin - 2021</p>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -198,10 +205,121 @@ export default {
         content: 'best place'
       }]
     }
+  },
+  
+  beforeCreate() {
+    console.log('aaa');
+    this.loadingScreen = true;
+    this.showScreen = false;
+  },
+  mounted() {
+    this.loadingScreen = false;
+    this.showScreen = true;
+    
+    
+  },
+  data() {
+    return {
+      loadingScreen: true,
+      showScreen: false,
+    };
   }
 }
 </script>
 <style>
+
+  .loadingScreen{
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  }
+  .lds-roller {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   body{
     background-color: black;
     color: white;
@@ -668,7 +786,7 @@ export default {
       padding: 0 10%;
     }
 
-        .view-more{
+    .view-more{
       display: block !important;
       font-size: 28px;
     }
