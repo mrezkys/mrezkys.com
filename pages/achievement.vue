@@ -13,6 +13,7 @@
               <AchievementCard position="1st" grade="National" year="2020" by="Politeknik Negeri Bali" title="Intechfest, Web Design Competition."/>
               <AchievementCard position="1st" grade="National" year="2020" by="Kejar Mimpi Makassar" title="Ramadhan Fair, Poster Design Competition."/>
               <AchievementCard position="2nd" grade="National" year="2020" by="Lembaga Perlindungan Anak Indonesia" title="LPAI, Poster Design Competition."/>
+              <AchievementCard position="2nd" grade="National" year="2019" by="Informatic Engineering UNISSULA" title="Challenge Your Skills #2, Poster Design Competition."/>
               <AchievementCard position="Fav 3" grade="National" year="2021" by="Aspac Indonesia & Facebook ( AMAN Project ). Im on the Dewan Anak Mataram Team, with Natasha, Bentang, and Dinda" title="Video Competition"/>
               <AchievementCard position="2nd" grade="National" year="2020" by="Virtual Skill Competition" title="VSC #2, Graphic Design Technolgy"/>
               <AchievementCard position="1st" grade="National" year="2021" by="Virtual Skill Competition" title="VSC #5, Graphic Design Technolgy"/>
