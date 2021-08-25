@@ -22,7 +22,7 @@
               <AchievementCard position="1st" grade="Province" year="2019" by="Hamzanwadi Festival Science & Tech" title="HESTEG #1, Graphic Design Competition"/>
               <AchievementCard position="2nd" grade="Province" year="2019" by="Asean Skills Competition " title="Selekda Asian Skills Competition, Graphic Design Technology"/>
 
-              
+              <AchievementCard position="1st" grade="City" year="2021" by="Lomba Kompetensi Siswa" title="LKS Kota Mataram, Graphic Design Technology"/>
               <AchievementCard position="2nd" grade="City" year="2020" by="Lomba Kompetensi Siswa" title="LKS Kota Mataram, Graphic Design Technology"/>
               <AchievementCard position="3rd" grade="City" year="2019" by="Fastabiqul Khairat SMAN 1 Mataran" title="Poster Design Competition"/>
 
