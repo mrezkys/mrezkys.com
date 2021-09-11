@@ -17,14 +17,14 @@
               <AchievementCard position="Fav 3" grade="National" year="2021" by="Aspac Indonesia & Facebook ( AMAN Project ). Im on the Dewan Anak Mataram Team, with Natasha, Bentang, and Dinda" title="Video Competition"/>
               <AchievementCard position="2nd" grade="National" year="2020" by="Virtual Skill Competition" title="VSC #2, Graphic Design Technolgy"/>
               <AchievementCard position="1st" grade="National" year="2021" by="Virtual Skill Competition" title="VSC #5, Graphic Design Technolgy"/>
-
               
+              <AchievementCard position="1st" grade="Province" year="2021" by="LKS SMK" title="LKS Provinsi NTB, Graphic Design Technology"/>
               <AchievementCard position="1st" grade="Province" year="2020" by="Mandalika University" title="Graphic Design Technology Competition"/>
               <AchievementCard position="1st" grade="Province" year="2019" by="Hamzanwadi Festival Science & Tech" title="HESTEG #1, Graphic Design Competition"/>
               <AchievementCard position="2nd" grade="Province" year="2019" by="Asean Skills Competition " title="Selekda Asian Skills Competition, Graphic Design Technology"/>
 
-              <AchievementCard position="1st" grade="City" year="2021" by="Lomba Kompetensi Siswa" title="LKS Kota Mataram, Graphic Design Technology"/>
-              <AchievementCard position="2nd" grade="City" year="2020" by="Lomba Kompetensi Siswa" title="LKS Kota Mataram, Graphic Design Technology"/>
+              <AchievementCard position="1st" grade="City" year="2021" by="LKS SMK" title="LKS Kota Mataram, Graphic Design Technology"/>
+              <AchievementCard position="2nd" grade="City" year="2020" by="LKS SMK" title="LKS Kota Mataram, Graphic Design Technology"/>
               <AchievementCard position="3rd" grade="City" year="2019" by="Fastabiqul Khairat SMAN 1 Mataran" title="Poster Design Competition"/>
 
               
