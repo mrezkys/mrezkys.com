@@ -6,7 +6,7 @@
         <div class="container-lg section-4 pt-1 pb-3 pt-lg-5 pb-lg-3 mt-lg-3">
           <div class="achievement-box-wrapper">
             <div class="row align-items-center header ml-md-3">  
-              <h1 class="achievement-count mr-5">15+</h1>
+              <h1 class="achievement-count mr-5">20+</h1>
               <p class="title"><br> total <br> awards & <br> achievements</p>
             </div>
             <div class="row mt-3">
