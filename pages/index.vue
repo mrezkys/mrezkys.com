@@ -75,7 +75,7 @@
           <div class="achievement-box-wrapper">
             <div class="row align-items-end header justify-content-between ml-md-3">
               <div class="row align-items-center">            
-                <h1 class="achievement-count mr-5">15+</h1>
+                <h1 class="achievement-count mr-5">20+</h1>
                 <p class="title"><br> total <br> awards & <br> achievements</p>
               </div>
               <NuxtLink to="/achievement" class="see-all">
