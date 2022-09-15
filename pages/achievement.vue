@@ -11,6 +11,8 @@
             </div>
             <div class="row mt-3">
               <AchievementCard position="3rd" grade="National" year="2021" by="Puspresnas & Kemdikbud ( Ministry of Education and Culture )" title="LKS Nasional XVIII Graphic Design Technology"/>
+              <AchievementCard position="2nd" grade="National" year="2022" by="Kementrian Ketenagakerjaan ( Ministry of Manpower )" title="Seleksi Daerah Asean Skills Competition"/>
+              <AchievementCard position="2nd" grade="National" year="2022" by="HMIF Universitas Mataram" title="Lomba Desain Poster - Infornation 2022"/>
               <AchievementCard position="1st" grade="National" year="2021" by="Politeknik Negeri Bali" title="Intechfest, Web Design Competition - College Level."/>
               <AchievementCard position="1st" grade="National" year="2020" by="Politeknik Negeri Bali" title="Intechfest, Web Design Competition Tingkat - Highschool Level"/>
               <AchievementCard position="1st" grade="National" year="2020" by="Kejar Mimpi Makassar" title="Ramadhan Fair, Poster Design Competition."/>
